@@ -1,11 +1,8 @@
 <mat-drawer-container class="example-container" [hasBackdrop]="'true'">
-  <mat-drawer #drawer [mode]="'over'">
+  <mat-drawer #drawer [mode]="'over'" [opened]="landingService.openedMenuLanding" (closed)="closeMenu()">
     <app-menu-mobile></app-menu-mobile>
   </mat-drawer>
   <mat-drawer-content>
     <app-navbar-landing></app-navbar-landing>
-
-    <h1>Cuerpo de la petición</h1>
-    <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
   </mat-drawer-content>
 </mat-drawer-container>

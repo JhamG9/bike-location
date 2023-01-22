@@ -3,6 +3,7 @@
 .menu-mobile {
   padding: 30px 25px;
   width: 290px;
+  margin-top: 20px;
 }
 
 .icon {
@@ -11,5 +12,21 @@
     font-variant: petite-caps;
     font-size: 35px;
     font-weight: 600;
+  }
+}
+
+.options {
+  margin-top: 40px;
+  &__opt {
+    font-family: "Heebo", Sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #082852;
+    padding: 15px 0px 15px 15px;
+    cursor: pointer;
+  }
+
+  &__separator {
+    border-bottom: 1px solid #d0d0d0;
   }
 }
