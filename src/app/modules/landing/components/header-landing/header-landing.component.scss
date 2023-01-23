@@ -1,0 +1,146 @@
+@import "../../../../styles/index.scss";
+
+.header-landing {
+  display: flex;
+  justify-content: center;
+}
+
+.body-header {
+  margin-top: 60px;
+  width: 100%;
+  max-width: 1140px;
+  padding: 10px;
+
+  &__title {
+    text-align: center;
+    letter-spacing: 5px;
+    color: $ogre-odor-color;
+    text-transform: uppercase;
+    font-weight: 100;
+  }
+
+  &__subtitle {
+    color: $downriver-color;
+    text-align: center;
+    font-size: 60px;
+    font-family: "Playfair Display";
+    margin-top: 60px !important;
+    line-height: 70px;
+    font-weight: 600;
+  }
+
+  .img-bikes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__img {
+      max-width: 100%;
+    }
+  }
+}
+
+.steps-section {
+  margin-top: 90px;
+}
+
+.labels-steps {
+  &__title {
+    text-align: center;
+    letter-spacing: 5px;
+    color: $ogre-odor-color;
+    text-transform: uppercase;
+    font-weight: 100;
+  }
+
+  &__subtitle {
+    color: $downriver-color;
+    text-align: center;
+    font-size: 45px;
+    font-family: "Playfair Display";
+    margin-top: 20px !important;
+    line-height: 70px;
+    font-weight: 600;
+  }
+}
+
+.icon-step {
+  background-color: $ogre-odor-color;
+  display: flex;
+  width: 70px;
+  padding: 15px;
+  border-radius: 10px;
+
+  &__icon {
+    width: auto;
+    height: auto;
+    font-size: 40px;
+    color: $white-color;
+  }
+}
+
+.step-card {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__title {
+    font-family: "Playfair Display";
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.35em;
+    margin-top: 15px !important;
+    text-align: center;
+  }
+
+  &__description {
+    margin-top: 10px !important;
+    color: $gray-color;
+    font-weight: 100;
+    font-size: 15px;
+    text-align: center;
+  }
+}
+
+.step-arrow {
+  width: 12.5%;
+  display: flex;
+  align-items: center;
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.steps-data {
+  display: flex;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .body-header {
+    &__subtitle {
+      font-size: 50px;
+      line-height: 60px;
+    }
+  }
+
+  .step-arrow {
+    display: none;
+  }
+
+  .step-card {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .steps-data {
+    flex-direction: column;
+  }
+
+  .steps-section {
+    margin-top: 50px;
+  }
+}

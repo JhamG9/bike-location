@@ -6,9 +6,17 @@ import { NavbarLandingComponent } from './components/navbar-landing/navbar-landi
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MenuMobileComponent } from './components/menu-mobile/menu-mobile.component';
+import { HeaderLandingComponent } from './components/header-landing/header-landing.component';
+import { AboutUsLandingComponent } from './components/about-us-landing/about-us-landing.component';
 
 @NgModule({
-  declarations: [LandingComponent, NavbarLandingComponent, MenuMobileComponent],
+  declarations: [
+    LandingComponent,
+    NavbarLandingComponent,
+    MenuMobileComponent,
+    HeaderLandingComponent,
+    AboutUsLandingComponent
+  ],
   imports: [
     CommonModule,
     LandingRoutingModule,
