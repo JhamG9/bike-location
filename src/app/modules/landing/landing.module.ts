@@ -8,6 +8,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MenuMobileComponent } from './components/menu-mobile/menu-mobile.component';
 import { HeaderLandingComponent } from './components/header-landing/header-landing.component';
 import { AboutUsLandingComponent } from './components/about-us-landing/about-us-landing.component';
+import { WeAreComponent } from './components/we-are/we-are.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AboutUsLandingComponent } from './components/about-us-landing/about-us-
     NavbarLandingComponent,
     MenuMobileComponent,
     HeaderLandingComponent,
-    AboutUsLandingComponent
+    AboutUsLandingComponent,
+    WeAreComponent
   ],
   imports: [
     CommonModule,

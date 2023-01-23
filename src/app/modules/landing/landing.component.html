@@ -1,10 +1,16 @@
 <mat-drawer-container class="example-container" [hasBackdrop]="'true'">
-  <mat-drawer #drawer [mode]="'over'" [opened]="landingService.openedMenuLanding" (closed)="closeMenu()">
+  <mat-drawer
+    #drawer
+    [mode]="'over'"
+    [opened]="landingService.openedMenuLanding"
+    (closed)="closeMenu()"
+  >
     <app-menu-mobile></app-menu-mobile>
   </mat-drawer>
   <mat-drawer-content>
     <app-navbar-landing></app-navbar-landing>
-    <app-header-landing></app-header-landing> 
+    <app-header-landing></app-header-landing>
     <app-about-us-landing></app-about-us-landing>
+    <app-we-are></app-we-are>
   </mat-drawer-content>
 </mat-drawer-container>
