@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from '../environments/environment';
-import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -15,9 +14,6 @@ import { AgmCoreModule } from '@agm/core';
   ],
   imports: [
     BrowserModule,
-    AgmCoreModule.forRoot({
-      apiKey: ''
-    }),
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),

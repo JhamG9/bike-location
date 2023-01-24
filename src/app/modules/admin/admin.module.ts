@@ -7,6 +7,6 @@ import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [AdminComponent],
-  imports: [CommonModule, AdminRoutingModule, MatSidenavModule, MatIconModule],
+  imports: [CommonModule, MatIconModule, AdminRoutingModule, MatSidenavModule],
 })
 export class AdminModule {}
