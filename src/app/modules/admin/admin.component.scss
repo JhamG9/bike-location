@@ -1,0 +1,40 @@
+@import "../../styles/index.scss";
+
+::ng-deep .mat-drawer-container {
+  height: 100% !important;
+}
+
+.menu-admin {
+  padding: 30px 25px;
+  width: 280px;
+  margin-top: 20px;
+
+  &__icon {
+    color: $ogre-odor-color;
+    font-variant: petite-caps;
+    font-size: 35px;
+    font-weight: 600;
+  }
+}
+
+.actions {
+  margin-top: 50px;
+
+  &__divider {
+    border-bottom: 1px solid #d0d0d0;
+  }
+}
+
+.action {
+  display: flex;
+  font-family: "Heebo", Sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #082852;
+  cursor: pointer;
+  margin: 15px 0px;
+
+  &__label {
+    margin-left: 10px !important;
+  }
+}

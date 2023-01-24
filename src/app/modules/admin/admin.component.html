@@ -1,0 +1,39 @@
+<mat-drawer-container [hasBackdrop]="false">
+  <mat-drawer #drawer [mode]="'side'" [opened]="true">
+    <section class="menu-admin">
+      <p class="menu-admin__icon">Bike Location</p>
+
+      <div class="actions">
+        <div class="action">
+          <mat-icon
+            aria-hidden="false"
+            aria-label="show_chart"
+            fontIcon="show_chart"
+          ></mat-icon>
+          <p class="action__label">Estadisticas</p>
+        </div>
+        <div class="actions__divider"></div>
+        <div class="action">
+          <mat-icon
+            aria-hidden="false"
+            aria-label="map"
+            fontIcon="map"
+          ></mat-icon>
+          <p class="action__label">Mis rutas</p>
+        </div>
+      </div>
+    </section>
+  </mat-drawer>
+  <mat-drawer-content>
+    <h1>Body</h1>
+
+    <iframe
+  width="600"
+  height="450"
+  style="border:0"
+  loading="lazy"
+  allowfullscreen
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+  </mat-drawer-content>
+</mat-drawer-container>
