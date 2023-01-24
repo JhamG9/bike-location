@@ -25,6 +25,7 @@
     "@capacitor/cli": "^4.6.2",
     "@capacitor/core": "^4.6.2",
     "@capacitor/ios": "^4.6.2",
+    "angular-cli-ghpages": "^1.0.5",
     "ol": "^7.2.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
