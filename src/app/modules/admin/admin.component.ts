@@ -8,10 +8,10 @@ import TileLayer from 'ol/layer/Tile';
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.scss'],
 })
-export class AdminComponent implements OnInit {
+export class AdminComponent  {
   public map!: Map;
 
-  ngOnInit(): void {
+  /* ngOnInit(): void {
     this.map = new Map({
       layers: [
         new TileLayer({
@@ -25,5 +25,5 @@ export class AdminComponent implements OnInit {
         maxZoom: 18,
       }),
     });
-  }
+  } */
 }
