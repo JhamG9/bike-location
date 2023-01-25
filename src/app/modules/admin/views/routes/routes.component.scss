@@ -46,3 +46,30 @@
     margin-left: 30px;
   }
 }
+
+@media screen and (max-width: 620px) {
+  .filters {
+    margin-top: 10px;
+  }
+
+  .fields {
+    flex-flow: wrap;
+    justify-content: center;
+
+    &__date {
+      margin-left: 10px;
+    }
+
+    &__button {
+      margin-left: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 391px) {
+  .fields {
+    &__button {
+      margin-top: 10px;
+    }
+  }
+}
