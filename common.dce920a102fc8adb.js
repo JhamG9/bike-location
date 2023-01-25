@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkangular_mobile_app=self.webpackChunkangular_mobile_app||[]).push([[592],{2401:(n,t,r)=>{r.d(t,{B:()=>e});var s=r(4650),_=r(3805);class e{constructor(a){this.db=a}getAllUsers(){return this.db.list("users").valueChanges()}}e.\u0275fac=function(a){return new(a||e)(s.LFG(_.KQ))},e.\u0275prov=s.Yz7({token:e,factory:e.\u0275fac,providedIn:"root"})}}]);
