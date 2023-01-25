@@ -1,11 +1,8 @@
-<mat-drawer-container [hasBackdrop]="adminService.isMobile ? true : false">
-  <mat-drawer
-    #drawer
-    [mode]="adminService.isMobile ? 'over' : 'side'"
-    [opened]="adminService.openedMenu"
-  >
+<mat-drawer-container [hasBackdrop]="false">
+  <mat-drawer #drawer [mode]="'side'" [opened]="true">
     <section class="menu-admin">
       <p class="menu-admin__icon">Bike Location</p>
+
       <div class="actions">
         <div class="action">
           <mat-icon
@@ -28,7 +25,6 @@
     </section>
   </mat-drawer>
   <mat-drawer-content>
-    <app-navbar-admin *ngIf="adminService.isMobile"></app-navbar-admin>
     <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>
