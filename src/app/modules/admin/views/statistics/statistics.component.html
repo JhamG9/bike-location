@@ -1,0 +1,34 @@
+<div class="statistics">
+  <p class="statistics__title">Estadisticas</p>
+
+  <p class="statistics__subtitle">
+    Aqui puedes ver como es el comportamiento de nuestras bicicletas
+  </p>
+
+  <div class="data-statistics">
+    <div class="section-data">
+      <canvas
+      class="chart-statistics"
+        baseChart
+        [data]="barChartData"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+        [type]="'bar'"
+      >
+      </canvas>
+    </div>
+    <div class="section-data">
+      <canvas
+        baseChart
+        width="400"
+        height="400"
+        [type]="'line'"
+        [data]="lineChartData"
+        [options]="lineChartOptions"
+        [legend]="lineChartLegend"
+      >
+      </canvas>
+    </div>
+  </div>
+</div>

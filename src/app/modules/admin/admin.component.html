@@ -11,19 +11,21 @@
         <div class="action">
           <mat-icon
             aria-hidden="false"
-            aria-label="show_chart"
-            fontIcon="show_chart"
+            aria-label="map"
+            fontIcon="map"
           ></mat-icon>
-          <p class="action__label">Estadisticas</p>
+          <p class="action__label" (click)="goToPage('admin')">Mis rutas</p>
         </div>
         <div class="actions__divider"></div>
         <div class="action">
           <mat-icon
             aria-hidden="false"
-            aria-label="map"
-            fontIcon="map"
+            aria-label="show_chart"
+            fontIcon="show_chart"
           ></mat-icon>
-          <p class="action__label">Mis rutas</p>
+          <p class="action__label" (click)="goToPage('admin/statistics')">
+            Estadisticas
+          </p>
         </div>
       </div>
     </section>

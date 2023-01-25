@@ -1,0 +1,34 @@
+.statistics {
+  padding: 20px;
+
+  &__title {
+    color: #082852;
+    font-family: "Playfair Display";
+    font-weight: 600;
+    font-size: 30px;
+  }
+
+  &__subtitle {
+    color: #888888;
+    font-weight: 100;
+    font-size: 15px;
+    margin-top: 10px !important;
+  }
+}
+
+.data-statistics {
+  margin-top: 20px;
+  display: flex;
+}
+
+.section-data {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-statistics {
+  width: 100%;
+  max-width: 400px;
+}

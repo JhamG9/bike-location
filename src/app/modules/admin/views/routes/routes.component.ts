@@ -49,16 +49,7 @@ export class RoutesComponent implements OnInit {
         }),
       ],
     });
-
     this.loadAllUsers();
-
-    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-      // true for mobile device
-      document.write("mobile device");
-    }else{
-      // false for not mobile device
-      document.write("not mobile device");
-    }
   }
 
   loadAllUsers() {
@@ -122,7 +113,7 @@ export class RoutesComponent implements OnInit {
         }),
         style: new Style({
           stroke: new Stroke({
-            color: 'green',
+            color: '#fe5b3e',
             width: 6,
           }),
         }),

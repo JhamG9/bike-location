@@ -26,6 +26,8 @@
     "@capacitor/core": "^4.6.2",
     "@capacitor/ios": "^4.6.2",
     "angular-cli-ghpages": "^1.0.5",
+    "chart.js": "^4.2.0",
+    "ng2-charts": "^4.1.1",
     "ngx-device-detector": "^5.0.1",
     "ol": "^7.2.2",
     "rxjs": "~7.5.0",
