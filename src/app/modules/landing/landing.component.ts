@@ -15,9 +15,7 @@ export class LandingComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.userFirestoreService.getAllUsers().subscribe((resp: any) => {
-      this.users = resp;
-    });
+    
   }
 
   closeMenu() {
