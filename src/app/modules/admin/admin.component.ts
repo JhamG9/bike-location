@@ -1,8 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AdminService } from './admin.service';
 
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.scss'],
 })
-export class AdminComponent {}
+export class AdminComponent {
+  constructor(public adminService: AdminService) {
+    this.adminService.checkIsMobile();
+  }
+
+}
