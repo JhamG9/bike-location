@@ -18,24 +18,13 @@ export class StatisticsComponent implements OnInit {
   };
 
   // ----------------------------- LINE ------------------------------------
-  public lineChartData: ChartConfiguration<'line'>['data'] = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-    datasets: [
-      {
-        data: [20, 54, 12, 80, 12, 32],
-        label: 'Series A',
-        fill: true,
-        tension: 0.5,
-        borderColor: 'black',
-        backgroundColor: 'rgba(255,0,0,0.3)',
-      },
-    ],
-  };
+  hoursActivity = [6, 7, 8, 18, 19, 20];
+  public lineChartData: ChartConfiguration<'line'>['data'];
+
   public lineChartOptions: ChartOptions<'line'> = {
     responsive: false,
   };
   public lineChartLegend = true;
-
   constructor(private locationFirestoreService: LocationFirestoreService) {}
 
   ngOnInit(): void {
@@ -70,6 +59,28 @@ export class StatisticsComponent implements OnInit {
         labels: labels,
         datasets: [{ data: arrayValuesDays, label: 'Localizaciones por día' }],
       };
+
+      let arrayValuesHours: any = [];
+      this.hoursActivity.forEach((hour) => {
+        const elements = resp.filter(
+          (item) => +item.hour.split(':')[0] === hour
+        );
+        arrayValuesHours.push(elements.length);
+      });
+      this.lineChartData = {
+        labels: ['6 am', '7am', '8am', '6pm', '7pm', '8pm'],
+        datasets: [
+          {
+            data: arrayValuesHours,
+            label: 'Horas con mayor actividad',
+            fill: true,
+            tension: 0.5,
+            borderColor: 'black',
+            backgroundColor: 'rgba(255,0,0,0.3)',
+          },
+        ],
+      };
     });
   }
+
 }
