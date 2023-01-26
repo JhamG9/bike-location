@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartConfiguration, ChartOptions } from 'chart.js';
+import { LocationFirestoreService } from 'src/app/firebase/location-firestore.service';
 
 @Component({
   selector: 'app-statistics',
@@ -10,12 +11,7 @@ export class StatisticsComponent implements OnInit {
   public barChartLegend = true;
   public barChartPlugins = [];
 
-  public barChartData: ChartConfiguration<'bar'>['data'] = {
-    labels: ['2006', '2007', '2008', '2009', '2010', '2011', '2012'],
-    datasets: [
-      { data: [65, 59, 80, 81, 56, 55, 40], label: 'Visitas por día' },
-    ],
-  };
+  public barChartData: ChartConfiguration<'bar'>['data'];
 
   public barChartOptions: ChartConfiguration<'bar'>['options'] = {
     responsive: false,
@@ -26,7 +22,7 @@ export class StatisticsComponent implements OnInit {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
     datasets: [
       {
-        data: [65, 59, 80, 81, 56, 55, 40],
+        data: [20, 54, 12, 80, 12, 32],
         label: 'Series A',
         fill: true,
         tension: 0.5,
@@ -40,6 +36,8 @@ export class StatisticsComponent implements OnInit {
   };
   public lineChartLegend = true;
 
+  constructor(private locationFirestoreService: LocationFirestoreService) {}
+
   ngOnInit(): void {
     this.Last7Days();
   }
@@ -48,10 +46,30 @@ export class StatisticsComponent implements OnInit {
     const dates = [...Array(7)].map((_, i) => {
       const d = new Date();
       d.setDate(d.getDate() - i);
-      return d.getDate() + '/' + d.getMonth()+1;
+      return d.getDate() + '/' + (d.getMonth() + 1) + '/' + d.getFullYear();
     });
-    this.barChartData.labels = dates;
+
+    this.getLastLocations(dates);
   }
 
-  
+  getLastLocations(labels: any) {
+    this.locationFirestoreService.getAllLocations().subscribe((resp: any[]) => {
+      let arrayValuesDays: any = [];
+
+      labels?.forEach((date: any) => {
+        let dateArray = date.split('/');
+        const elements = resp.filter(
+          (location) =>
+            location.date ===
+            dateArray[2] + '-' + dateArray[1] + '-' + dateArray[0]
+        );
+        arrayValuesDays.push(elements.length);
+      });
+
+      this.barChartData = {
+        labels: labels,
+        datasets: [{ data: arrayValuesDays, label: 'Localizaciones por día' }],
+      };
+    });
+  }
 }
