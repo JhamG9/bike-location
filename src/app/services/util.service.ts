@@ -9,6 +9,6 @@ export class UtilService {
   constructor(private router: Router) { }
 
   goToPage(url: string){
-    //this.router.navigate([url])
+    this.router.navigate([url])
   }
 }
