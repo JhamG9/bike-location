@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { UtilService } from 'src/app/services/util.service';
 import { AdminService } from './admin.service';
 
@@ -8,13 +8,17 @@ import { AdminService } from './admin.service';
   styleUrls: ['./admin.component.scss'],
 })
 export class AdminComponent {
-  constructor(public adminService: AdminService,
-    private utilService: UtilService) {
+  constructor(
+    public adminService: AdminService,
+    private utilService: UtilService
+  ) {
     this.adminService.checkIsMobile();
   }
 
-  goToPage(route: string){
+  goToPage(route: string) {
     this.utilService.goToPage(route);
+    if (this.adminService.isMobileOrTablet()) {
+      this.adminService.openCloseMenu();
+    }
   }
-
 }

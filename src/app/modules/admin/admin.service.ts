@@ -14,13 +14,20 @@ export class AdminService {
     this.openedMenu = !this.openedMenu;
   }
 
+  isMobileOrTablet() {
+    if (this.deviceService.isMobile() || this.deviceService.isTablet()) {
+      return true;
+    }
+    return false;
+  }
+
   checkIsMobile() {
     if (this.deviceService.isMobile() || this.deviceService.isTablet()) {
       this.isMobile = true;
-      this.openedMenu =  false;
+      this.openedMenu = false;
       return;
     }
-    this.openedMenu =  true;
+    this.openedMenu = true;
     this.isMobile = false;
   }
 }
